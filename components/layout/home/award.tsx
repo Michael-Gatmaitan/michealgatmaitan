@@ -9,7 +9,7 @@ const Award = ({ award }: { award: AwardT }) => {
   const [expand, setExpand] = useState(false)
 
   return (
-    <div className="grid gap-3 font-mono">
+    <div className="grid gap-3 font-mono lg:col-span-1">
       <div className="flex justify-between items-center">
         <div>
           <div className="font-medium text-xl">{award.title}</div>

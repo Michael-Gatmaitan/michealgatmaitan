@@ -4,7 +4,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className="grid">
+    <div className="grid lg:col-span-full">
       <Header1>Hi,<br />I am Michael</Header1>
 
       <div className="mt-[200px] font-mono text-center">

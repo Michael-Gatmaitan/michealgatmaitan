@@ -5,9 +5,9 @@ import Skills from "@/components/layout/home/skills";
 
 export default function Home() {
   return (
-    <div className="grid gap-2">
+    <div className="grid gap-2 lg:grid-cols-2">
       <Hero />
-      <Projects />
+      <Projects limit={1} />
 
       <Skills />
       <Awards />
