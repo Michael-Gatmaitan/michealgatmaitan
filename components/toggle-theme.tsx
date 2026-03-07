@@ -11,13 +11,14 @@ export function ModeToggle() {
 
   React.useEffect(() => {
     if (!mounted) setMounted(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggleTheme = () => {
     if (theme === "light") setTheme('dark');
     else setTheme('light')
   }
+
+  if (!mounted) return null;
 
   return (
     <Button onClick={toggleTheme} size="icon">

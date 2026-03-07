@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Bebas_Neue, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Nav from "@/components/layout/nav/nav";
+import SideMenu from "@/components/layout/side-menu/side-menu";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
@@ -35,7 +37,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Nav />
+          <SideMenu />
+
+          <main className="px-4 lg:px-12 xl:px-[90px] 2xl:px-[140px] pb-8">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
