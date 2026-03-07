@@ -2,7 +2,7 @@ import { ComponentProps, ReactNode } from "react";
 
 type HeaderProps = { children: ReactNode } & ComponentProps<"div">;
 
-interface Project {
+interface ProjectT {
   id: number;
   slug: string;
   title: string;
@@ -10,4 +10,13 @@ interface Project {
   tech: string[];
   github: string;
   link: string;
+}
+
+interface AwardT {
+  id: number;
+  title: string;
+  shortDescription: string;
+  year: string;
+  description: string;
+  imageUrl: string;
 }

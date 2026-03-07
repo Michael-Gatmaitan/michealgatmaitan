@@ -1,9 +1,9 @@
 import Header3 from '@/components/custom/typography/Header3'
 import ProjectCard from '../projects/project-card'
-import { Project } from '@/index'
+import { ProjectT } from '@/index'
 import Link from 'next/link'
 
-const project: Project = {
+const project: ProjectT = {
   id: 1,
   slug: "anatolearn",
   title: "AnatoLearn",
