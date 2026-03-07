@@ -4,12 +4,12 @@ import { skills } from "@/lib/skill-list"
 
 const Skills = () => {
   return (
-    <div className="mt-[150px]">
+    <div className="mt-[150px] lg:col-span-1">
       <Header3>Skills</Header3>
 
       <div className="mt-[14px] grid gap-3">
         <SkillSet title="Frontend" techs={skills.frontend} />
-        <SkillSet title="Backend" techs={skills.frontend} />
+        <SkillSet title="Backend" techs={skills.backend} />
       </div>
     </div>
   )
@@ -17,7 +17,7 @@ const Skills = () => {
 
 const SkillCard = ({ tech }: { tech: string }) => {
   return (
-    <div className="p-2 bg-primary flex gap-2 items-center w-min">
+    <div className="p-2 bg-primary flex gap-2 items-center">
       <div className="w-8 h-8 bg-background"></div>
       <div className="font-mono">{tech}</div>
     </div>
