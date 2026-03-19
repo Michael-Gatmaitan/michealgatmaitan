@@ -1,6 +1,5 @@
 import Header1 from '@/components/custom/typography/Header1'
 import Header3 from '@/components/custom/typography/Header3'
-import React from 'react'
 
 const Hero = () => {
   return (
@@ -12,9 +11,11 @@ const Hero = () => {
         fullstack developer
       </div>
 
-      <Header3 className="text-justify mt-[90px] lg:mt-[120px]">
-        I am Michael Gatmaitan from Bulacan, Philippines. I am 23 year old graduating student in Bachelor of science in information technology.
-      </Header3>
+      <div className="lg:flex items-center justify-center">
+        <Header3 className="text-justify mt-[90px] lg:mt-[120px] lg:w-10/12 lg:text-center">
+          I am Michael Gatmaitan from Bulacan, Philippines. I am 23 year old graduating student in Bachelor of science in information technology.
+        </Header3>
+      </div>
     </div>
   )
 }

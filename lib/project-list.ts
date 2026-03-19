@@ -10,6 +10,7 @@ export const projects: ProjectT[] = [
     tech: ["NextJS", "TailwindCSS"],
     github: "https://github.com/Michael-Gatmaitan",
     link: "https://anatolearn.netlify.app",
+    gallery: [],
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const projects: ProjectT[] = [
     tech: ["NextJS", "TailwindCSS"],
     github: "https://github.com/Michael-Gatmaitan",
     link: "https://anatolearn.netlify.app",
+    gallery: [],
   },
   {
     id: 3,
@@ -30,5 +32,6 @@ export const projects: ProjectT[] = [
     tech: ["NextJS", "TailwindCSS"],
     github: "https://github.com/Michael-Gatmaitan",
     link: "https://anatolearn.netlify.app",
+    gallery: [],
   },
 ];

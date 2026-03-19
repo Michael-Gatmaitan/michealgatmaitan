@@ -25,23 +25,21 @@ const Award = ({ award }: { award: AwardT }) => {
         </div>
       </div>
 
-      <AnimatePresence initial={false}>
-        {expand && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="overflow-hidden"
-          >
-            <div className="space-y-2 pt-1">
-              <div className="w-full h-40 bg-primary">
-              </div>
-              <div className="opacity-60">{award.description}</div>
+      {expand && (
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: 'auto', opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.25, ease: 'easeInOut' }}
+          className="overflow-hidden"
+        >
+          <div className="space-y-2 pt-1">
+            <div className="w-full h-40 bg-primary">
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <div className="opacity-60">{award.description}</div>
+          </div>
+        </motion.div>
+      )}
     </div>
   )
 }

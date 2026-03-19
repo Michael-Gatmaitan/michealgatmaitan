@@ -10,6 +10,7 @@ interface ProjectT {
   tech: string[];
   github: string;
   link: string;
+  gallery: string[];
 }
 
 interface AwardT {
