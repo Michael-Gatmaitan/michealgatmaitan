@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="grid gap-2 lg:grid-cols-2">
       <Hero />
-      <Projects limit={1} />
+      <Projects />
 
       <Skills />
       <Awards />
