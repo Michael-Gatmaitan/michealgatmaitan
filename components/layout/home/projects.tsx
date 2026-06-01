@@ -1,12 +1,14 @@
 import Header3 from '@/components/custom/typography/Header3'
-import DisplayProjects from '../projects/display-projects'
-const Projects = () => {
+import ProjectSection from '../projects/project-section';
 
+const Projects = () => {
   return (
-    <div className="mt-[150px] grid gap-3 lg:col-span-full">
+    <div className="mt-[150px] grid gap-3 lg:col-span-full" id="projects">
       <Header3>Projects</Header3>
 
-      <DisplayProjects limit={1} />
+      {/* Projects section */}
+      <ProjectSection />
+
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import Header2 from '@/components/custom/typography/Header2'
-import DisplayProjects from '@/components/layout/projects/display-projects'
+import ProjectSection from '@/components/layout/projects/project-section'
 
 const page = () => {
   return (
@@ -7,7 +7,7 @@ const page = () => {
       <Header2 className="text-secondary">Projects</Header2>
       <div className="font-mono opacity-60 lg:text-xl">Projects I&apos;ve made along the way</div>
 
-      <DisplayProjects limit={0} />
+      <ProjectSection />
     </div>
   )
 }

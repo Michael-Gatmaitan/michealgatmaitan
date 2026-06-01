@@ -1,15 +1,12 @@
 'use client'
 
-import { projects } from '@/lib/project-list'
+// import { projects } from '@/lib/project-list'
 import Link from 'next/link'
 import ProjectCard from './project-card'
-import { motion, useInView, type Variants } from 'motion/react'
-import { useRef } from 'react'
+import { motion, type Variants } from 'motion/react'
+import { Project } from '@/index'
 
-const DisplayProjects = ({ limit }: { limit: number }) => {
-  const ref = useRef<HTMLDivElement | null>(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
-
+const DisplayProjects = ({ limit, projects }: { limit: number, projects: Project[] }) => {
   const effectiveLimit =
     limit <= 0 || limit >= projects.length ? projects.length : limit
 
@@ -38,16 +35,22 @@ const DisplayProjects = ({ limit }: { limit: number }) => {
     },
   }
 
+  if (!projects) return (
+    <div className="flex items-center justify-center">
+      <p>No projects found</p>
+    </div>
+  )
+
   return (
     <motion.div
-      ref={ref}
       variants={containerVariants}
       initial="hidden"
-      animate={isInView ? 'show' : 'hidden'}
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
     >
-      <div className="grid gap-2 lg:grid-cols-3">
+      <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
         {visibleProjects.map((project) => (
-          <motion.div key={project.slug} variants={itemVariants}>
+          <motion.div key={project.id} variants={itemVariants}>
             <ProjectCard project={project} />
           </motion.div>
         ))}

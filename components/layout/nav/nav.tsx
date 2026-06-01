@@ -11,10 +11,23 @@ const Nav = () => {
       </Link>
 
       <div className="hidden lg:flex gap-2">
-        <Button variant="ghost">Home</Button>
-        <Button variant="ghost">Home</Button>
-        <Button variant="ghost">Home</Button>
-        <Button variant="ghost">Home</Button>
+        <Button variant="ghost" asChild>
+          <Link href="#projects">
+            Projects
+          </Link>
+        </Button>
+
+        <Button variant="ghost" asChild>
+          <Link href="#projects">
+            Skills
+          </Link>
+        </Button>
+
+        <Button variant="ghost" asChild>
+          <Link href="#projects">
+            Awards
+          </Link>
+        </Button>
       </div>
 
       {/* <Menu /> */}

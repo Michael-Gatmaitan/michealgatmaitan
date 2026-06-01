@@ -1,11 +1,12 @@
 "use client"
 import Button from '@/components/custom/button'
-import { type AwardT } from '@/index'
+import { Award } from '@/index'
 import { Minus, Plus } from 'lucide-react'
-import { AnimatePresence, motion } from 'motion/react'
+import { motion } from 'motion/react'
+import Image from 'next/image'
 import { useState } from 'react'
 
-const Award = ({ award }: { award: AwardT }) => {
+const AwardCard = ({ award }: { award: Award }) => {
   const [expand, setExpand] = useState(false)
 
   return (
@@ -34,9 +35,10 @@ const Award = ({ award }: { award: AwardT }) => {
           className="overflow-hidden"
         >
           <div className="space-y-2 pt-1">
-            <div className="w-full h-40 bg-primary">
+            <div className="w-full aspect-[4/3] bg-primary relative">
+              <Image src={award.thumbnail!} alt={award.title} fill className='object-cover' />
             </div>
-            <div className="opacity-60">{award.description}</div>
+            <div className="opacity-60">{award.longDescription}</div>
           </div>
         </motion.div>
       )}
@@ -44,4 +46,4 @@ const Award = ({ award }: { award: AwardT }) => {
   )
 }
 
-export default Award
+export default AwardCard
