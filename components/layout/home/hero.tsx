@@ -10,18 +10,18 @@ const Hero = () => {
     <div className="grid lg:col-span-full">
       <div className="grid gap-2 lg:gap-4">
         <div>
-          <Header1>Hi,<br />I am Michael</Header1>
+          <Header1>Hi,<br />I am Michael<br />Gatmaitan</Header1>
         </div>
 
         <div className="flex gap-2">
           <Button asChild>
             <Link
-              href="/cv/mycv.pdf"
+              href="/cv/Michael Gatmaitan - Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Paperclip />
-              My CV
+              My Resume
             </Link>
           </Button>
           <Button asChild size="icon">

@@ -5,7 +5,7 @@ import Projects from "@/components/layout/home/projects";
 import Skills from "@/components/layout/home/skills";
 import { fetchContribution } from "@/lib/guthub-contibutions";
 
-export default async function page() {
+export default function page() {
 
   const contributionPromise = fetchContribution();
 
