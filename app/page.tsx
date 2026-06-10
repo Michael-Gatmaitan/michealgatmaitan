@@ -4,6 +4,12 @@ import Hero from "@/components/layout/home/hero";
 import Projects from "@/components/layout/home/projects";
 import Skills from "@/components/layout/home/skills";
 import { fetchContribution } from "@/lib/guthub-contibutions";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Michael Gatmaitan",
+  description: "Michael Gatmaitan's Portfolio",
+};
 
 export default function page() {
 

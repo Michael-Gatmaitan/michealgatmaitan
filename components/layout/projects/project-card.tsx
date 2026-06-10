@@ -9,9 +9,15 @@ const ProjectCard = ({ project }: { project: Project }) => {
       <div className="w-full bg-secondary flex justify-center">
         <Image src={project.thumbnail!} alt={project.title} width={500} height={500} />
       </div>
-      <Link href={`projects/${project.id}`} className="hover:underline">
-        <Header4>{project.title} {`>`}</Header4>
-      </Link>
+      <div className="flex justify-between items-center">
+        <Link href={`projects/${project.id}`} className="hover:underline">
+          <Header4>{project.title} {`>`}</Header4>
+        </Link>
+
+        <div className="font-medium font-sans">
+          {project.dateRange}
+        </div>
+      </div>
     </div>
   )
 }

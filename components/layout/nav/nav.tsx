@@ -12,19 +12,19 @@ const Nav = () => {
 
       <div className="hidden lg:flex gap-2">
         <Button variant="ghost" asChild>
-          <Link href="#projects">
+          <Link href="/#projects">
             Projects
           </Link>
         </Button>
 
         <Button variant="ghost" asChild>
-          <Link href="#projects">
+          <Link href="#skills">
             Skills
           </Link>
         </Button>
 
         <Button variant="ghost" asChild>
-          <Link href="#projects">
+          <Link href="#awards">
             Awards
           </Link>
         </Button>
