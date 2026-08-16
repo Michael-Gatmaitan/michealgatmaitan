@@ -5,6 +5,7 @@ import BackButton from '@/components/layout/projects/project/back-button';
 import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import FadeIn from '@/components/layout/projects/project/fade-in';
 
 const ShowProject = async ({ id }: { id: string }) => {
   const response = await fetch(`https://headless-portfolio-cms-api.vercel.app/public/v1/projects/${id}`, {
@@ -17,7 +18,7 @@ const ShowProject = async ({ id }: { id: string }) => {
   const data: Project = (await response.json()).data;
 
   return (
-    <div className='grid gap-3'>
+    <FadeIn className='grid gap-3'>
       <div className="flex gap-5 items-center">
         <BackButton />
         <Header2 className="text-secondary">{data.title}</Header2>
@@ -40,7 +41,7 @@ const ShowProject = async ({ id }: { id: string }) => {
           <Link href={data.github}>Github repo</Link>
         </Button>
       </div>
-    </div>
+    </FadeIn>
   )
 }
 

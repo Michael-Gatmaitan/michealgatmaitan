@@ -18,13 +18,13 @@ const Nav = () => {
         </Button>
 
         <Button variant="ghost" asChild>
-          <Link href="#skills">
+          <Link href="/#skills">
             Skills
           </Link>
         </Button>
 
         <Button variant="ghost" asChild>
-          <Link href="#awards">
+          <Link href="/#awards">
             Awards
           </Link>
         </Button>

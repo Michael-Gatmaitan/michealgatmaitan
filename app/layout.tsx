@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Nav from "@/components/layout/nav/nav";
 import SideMenu from "@/components/layout/side-menu/side-menu";
 import Footer from "@/components/layout/footer/footer";
+import PageTransition from "@/components/layout/page-transition";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
@@ -42,7 +43,7 @@ export default function RootLayout({
           <SideMenu />
 
           <main className="px-4 lg:px-12 xl:px-[90px] 2xl:px-[140px] pb-8">
-            {children}
+            <PageTransition>{children}</PageTransition>
           </main>
 
           <Footer />
