@@ -3,7 +3,7 @@ import AwardsSection from '../awards/awards-section'
 
 const Awards = () => {
   return (
-    <div className="mt-[150px]" id="awards">
+    <div className="mt-[150px] scroll-mt-20 lg:scroll-mt-24" id="awards">
       <Header3>Awards</Header3>
 
       <AwardsSection />

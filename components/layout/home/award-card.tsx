@@ -2,7 +2,7 @@
 import Button from '@/components/custom/button'
 import { Award } from '@/index'
 import { Minus, Plus } from 'lucide-react'
-import { motion } from 'motion/react'
+import { AnimatePresence, motion } from 'motion/react'
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -26,22 +26,24 @@ const AwardCard = ({ award }: { award: Award }) => {
         </div>
       </div>
 
-      {expand && (
-        <motion.div
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: 'auto', opacity: 1 }}
-          exit={{ height: 0, opacity: 0 }}
-          transition={{ duration: 0.25, ease: 'easeInOut' }}
-          className="overflow-hidden"
-        >
-          <div className="space-y-2 pt-1">
-            <div className="w-full aspect-[4/3] bg-primary relative">
-              <Image src={award.thumbnail!} alt={award.title} fill className='object-cover' />
+      <AnimatePresence initial={false}>
+        {expand && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+            className="overflow-hidden"
+          >
+            <div className="space-y-2 pt-1">
+              <div className="w-full aspect-[4/3] bg-primary relative">
+                <Image src={award.thumbnail!} alt={award.title} fill className='object-cover' />
+              </div>
+              <div className="opacity-60">{award.longDescription}</div>
             </div>
-            <div className="opacity-60">{award.longDescription}</div>
-          </div>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

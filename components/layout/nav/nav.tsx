@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Nav = () => {
   return (
-    <nav className="w-full sticky top-0 py-3 px-4 lg:px-12 xl:px-[90px] 2xl:px-[140px] flex justify-between items-center bg-background/30 backdrop-blur-md border-b border-b-primary/20 dark:border-b-white/20 mb-[70px] lg:mb-[100px]">
+    <nav className="w-full sticky top-0 z-50 py-3 px-4 lg:px-12 xl:px-[90px] 2xl:px-[140px] flex justify-between items-center bg-background/30 backdrop-blur-md border-b border-b-primary/20 dark:border-b-white/20 mb-[70px] lg:mb-[100px]">
       <Link href="/">
         <Logo />
       </Link>
